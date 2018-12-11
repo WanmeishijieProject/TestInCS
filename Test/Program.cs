@@ -38,7 +38,6 @@ namespace Test
         {
             Console.WriteLine($"Before {Name} Sleep");
             Thread.Sleep(7000);
-
             Console.WriteLine($"After {Name} Sleep");
             return $"{Name}'s Final name is {Name}+{Name}+{Name}";  
         }
