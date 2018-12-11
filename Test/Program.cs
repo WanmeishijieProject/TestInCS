@@ -19,6 +19,9 @@ namespace Test
                 Console.WriteLine(i);
             }
             Console.WriteLine($"异步方法执行的结果是{t.Result}");
+
+            //根据t的结果来决定下一步怎么做
+            t.ContinueWith(tt=>Console.WriteLine($"Continue{tt.Result}"),CancellationToken.None);
             Console.ReadKey();
         }
     
